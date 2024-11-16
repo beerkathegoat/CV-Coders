@@ -1,0 +1,992 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+/*.form{
+  body{   
+    background: #eee;  
+}  
+#frm{  
+    border: solid gray 1px;  
+    width:50%;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    background: white;  
+    padding: 50px;  
+}  
+#btn{  
+    color: #fff;  
+    background: #337ab7;  
+    padding: 7px;  
+    margin-left: 70%;  
+}  
+}*/
+  
+  nav {
+    background-image: url('./img/Gallery/OutsideHotel.jpg');
+    height: 630px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Needed to position the navbar */
+    position: relative;
+    padding: 100px 600px;
+  }
+
+  .nav-front{
+    position: absolute;
+    margin-top: -20%;
+    margin-left: -270%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navTop {
+    position: absolute;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: gray;
+    border-radius: 10px;
+    margin-top: -25%;
+    margin-left: -230%;
+    margin-right: 40%;
+  }
+  
+  .searchInput {
+    border: none;
+    background-color: transparent;
+    
+  }
+  
+  .searchInput::placeholder {
+    color: lightgray;
+  }
+  
+  .searchIcon{
+    position: relative;
+    right: 155px;
+  }
+  .limitedOffer {
+    position: relative;
+    top: -30px;
+    left: 800px;
+    cursor: pointer;
+  }
+
+  .adminbtn{
+    font-size: 15px;
+    height: 40px;
+    width: 70px;
+    color: #282834;
+    background-color: #7fc142;
+  }
+
+  .adminbtn:hover{
+    color: #7fc142;
+    background-color: #282834;
+  }
+  
+  .navBottom {
+    position: relative;
+    display: flex;
+    align-items: bottom;
+    top: 600px;
+    left: -550px;
+    
+  }
+  
+  .menuItem {
+    font-size: 27px;
+    height: 70px;
+    width: 120px;
+    margin-right: 210px;
+    float: bottom;
+    cursor: pointer;
+    color: #282834;
+    background-color: #7fc142;
+    font-weight: 700;
+  }
+
+  .menuItem:hover{
+    background-color: #282834;
+    color: #7fc142;
+  }
+
+  #awards {
+    background-color: grey;
+    display: flex;
+    height: 576px;
+  }
+
+  .HistoryEssay {
+    position: absolute;
+    margin-top: 10%; 
+    margin-left: 43%;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: left;
+    color: black;
+    z-index: 1;
+
+  }
+
+  .awardsWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1.5s ease-in-out;
+  }
+
+  .awardsFrame {
+    width: 460px; /* Adjust the width to fit the image with padding */
+    height: 490px; /* Maintain aspect ratio */
+    margin-left: 100px;
+    margin-top: 40px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    display: inline-block; /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+
+  }
+
+  .awardsFrame img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+  }
+
+  .awardsFrame{
+    transform:
+      perspective(750px)
+      translate3d(0px, 0px, -250px)
+      rotateX(27deg)
+      scale(0.9, 0.9);
+    border-radius: 20px;
+    border: 5px solid #e6e6e6;
+    box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease-in-out transform;
+  
+    &:hover {
+      transform: translate3d(0px, 0px, -250px);
+    }
+  }
+
+  #rooms {
+    background-color: #282834;
+    display: flex;
+    height: 1700px;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  .roomsWrapper {
+    display: flex;
+    width: 5000px;
+    transition: all 1.5s ease-in-out;
+  }
+
+  .roomsEssay {
+    position: absolute;
+    margin-top: 10%; 
+    margin-left: 36%;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+
+  .RoomFrame1 {
+    width: 550px; /* Adjust the width to fit the image with padding */
+    height: 500px; /* Maintain aspect ratio */
+    margin-left: -30px;
+    margin-top: 60px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .RoomFrame1 img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .RoomFrame2 {
+    width: 550px; /* Adjust the width to fit the image with padding */
+    height: 500px; /* Maintain aspect ratio */
+    margin-left: 480px;
+    margin-top: 400px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+     /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .RoomFrame2 img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .RoomFrame3 {
+    width: 550px; /* Adjust the width to fit the image with padding */
+    height: 500px; /* Maintain aspect ratio */
+    margin-left: -1580px;
+    margin-top: 740px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .RoomFrame3 img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .RoomFrame4 {
+    width: 550px; /* Adjust the width to fit the image with padding */
+    height: 500px; /* Maintain aspect ratio */
+    margin-left: 485px;
+    margin-top: 1080px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+
+  }
+
+  .RoomFrame4 img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #dining {
+    background-color: gray;
+    display: flex;
+    height: 576px;
+  }
+
+  .diningEssay {
+    position: absolute;
+    margin-top: 10%; 
+    margin-left: 43%;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: left;
+    color: black;
+    z-index: 1;
+
+  }
+
+
+  .diningFrame {
+    width: 460px; /* Adjust the width to fit the image with padding */
+    height: 490px; /* Maintain aspect ratio */
+    margin-left: 100px;
+    margin-top: 40px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    display: inline-block; /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+
+  }
+
+  .diningFrame img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+  }
+
+  .diningFrame {
+    transform:
+    perspective(750px)
+    translate3d(0px, 0px, -250px)
+    rotateX(27deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  border: 5px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+  }
+
+  .chef {
+    background-color: #282834;
+    display: flex;
+    height: 576px;
+  }
+
+  .chefEssay {
+    position: absolute;
+    margin-top: 12%; 
+    margin-left: 3%;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: right;
+    color: white;
+    z-index: 1;
+
+  }
+
+
+  .chefFrame {
+    width: 460px; /* Adjust the width to fit the image with padding */
+    height: 490px; /* Maintain aspect ratio */
+    margin-left: 1000px;
+    margin-top: 40px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    display: inline-block; /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+
+  }
+
+  .chefFrame img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+  }
+
+  .chefFrame {
+    transform:
+    perspective(750px)
+    translate3d(0px, 0px, -250px)
+    rotateX(27deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  border: 5px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+  }
+
+  #spa {
+    background-color: gray;
+    display: flex;
+    height: 576px;
+  }
+
+  .spaEssay {
+    position: absolute;
+    margin-top: 12%; 
+    margin-left: 40%;
+    font-size: 27px;
+    font-weight: 500;
+    text-align: right;
+    color: black;
+    z-index: 1;
+
+  }
+
+
+  .spaFrame {
+    width: 460px; /* Adjust the width to fit the image with padding */
+    height: 490px; /* Maintain aspect ratio */
+    margin-left: 100px;
+    margin-top: 40px;
+    padding: 0px; /* Space between the border and the image */
+    border-radius: 25px; /* Rounds the corners */
+    display: inline-block; /* Ensures the div behaves like an inline element */
+    background-color: white;
+    overflow: hidden;
+
+  }
+
+  .spaFrame img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 20px; /* Apply a smaller border-radius to the image for better fit */
+    display: block;
+    object-fit: cover;
+  }
+
+  .spaFrame {
+    transform:
+    perspective(750px)
+    translate3d(0px, 0px, -250px)
+    rotateX(27deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  border: 5px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+  }
+
+  .features {
+    background-color: #282834;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+    color: white;
+  }
+  
+  .featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
+  }
+
+  .bookhere {
+    background-color: gray;
+    height: 800px;
+  } 
+  
+
+  .bookimg1{
+    width: 300px; /* Adjust the width to fit the image with padding */
+    height: 300px;
+    margin-left: 45px;
+    border-radius: 10px;
+    border-color: black;
+    margin-top: 60px;
+    padding-bottom: 280px; /* Space between the border and the image */
+    background-color:  #282834;
+    text-align:center;
+    overflow: hidden;
+    box-shadow: 0 0 200px black;
+  }
+  
+
+
+  .bookDetails1{
+   margin-top: -280px;
+   margin-left: 75px;
+   color: white;
+  }
+
+  .bookbutton1{
+    height: 50px;
+    width: 120px;
+    background-color: #7fc142;
+    border-radius: 5px;
+  }
+
+.bookbutton1:hover{
+  background-color: #282834;
+  color: #fff;
+}
+
+  .bookimg2{
+    display: inline-block;
+    width: 300px; /* Adjust the width to fit the image with padding */
+    height: 300px;
+    margin-left: 415px;
+    border-radius: 10px;
+    border-color: black;
+    margin-top: -547px;
+    padding-bottom: 280px; /* Space between the border and the image */
+    background-color:#282834;
+    text-align:center;
+    overflow: hidden;
+    box-shadow: 0 0 200px black;
+  }
+
+
+  .bookDetails2{
+   margin-top: -280px;
+   margin-left: 445px;
+   color: white;
+  }
+
+  .bookbutton2{
+    height: 50px;
+    width: 120px;
+    background-color: #7fc142;
+    border-radius: 5px;
+  }
+
+  .bookbutton2:hover{
+    background-color: #282834;
+    color: #fff;
+  }
+
+  .bookimg3{
+    display: inline-block;
+    width: 300px; /* Adjust the width to fit the image with padding */
+    height: 300px;
+    margin-left: 785px;
+    border-radius: 10px;
+    border-color: black;
+    margin-top: -547px;
+    padding-bottom: 280px; /* Space between the border and the image */
+    background-color:#282834;
+    text-align:center;
+    overflow: hidden;
+    box-shadow: 0 0 200px black;
+  }
+
+
+  .bookDetails3{
+   color: white;
+   margin-top: -280px;
+   margin-left: 815px;
+  }
+
+  .bookbutton3{
+    height: 50px;
+    width: 120px;
+    background-color: #7fc142;
+    border-radius: 5px;
+  }
+
+  .bookbutton3:hover{
+    background-color: #282834;
+    color: #fff;
+  }
+
+  .bookimg4{
+    display: inline-block;
+    width: 300px; /* Adjust the width to fit the image with padding */
+    height: 300px;
+    margin-left: 1155px;
+    border-radius: 10px;
+    border-color: black;
+    margin-top: -547px;
+    padding-bottom: 280px; /* Space between the border and the image */
+    background-color:#282834;
+    text-align:center;
+    overflow: hidden;
+    box-shadow: 0 0 200px black;
+  }
+
+
+  .bookDetails4{
+   margin-top: -280px;
+   margin-left: 1185px;
+   color: white;
+  }
+
+  .bookbutton4{
+    height: 50px;
+    width: 120px;
+    background-color: #7fc142;
+    border-radius: 5px;
+  }
+
+  .bookbutton4:hover{
+    background-color: #282834;
+    color: #fff;
+  } 
+  
+  #bookNow {
+    height: 100vh;
+    background-color: #282834;
+    position: relative;
+  }
+  
+  .payment {
+    width: 500px;
+    height: 500px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .payTitle {
+    font-size: 20px;
+    color: lightgray;
+  }
+  
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  
+  .cardIcons {
+    display: flex;
+  }
+  
+  .cardIcon {
+    margin-right: 10px;
+  }
+  
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sm {
+    width: 30%;
+  }
+  
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  .productImg {
+    width: 50%;
+    height: 730px;
+  }
+  
+  .productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+  }
+  
+  .productTitle {
+    font-size: 75px;
+    font-weight: 900;
+    color: white;
+  }
+  
+  .productPrice{
+    color: white;
+  }
+
+  .productDesc {
+    font-style: 24px;
+    color: gray;
+  }
+  
+  .colors,
+  .room-selection {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .room-button.selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .room-button {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .productButton:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+  }
+  
+  .footerMenu, .footerRightMenu {
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  .footerMenu h2, .footerRightMenu h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footerMenu ul, .footerRightMenu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footerMenu ul li, .footerRightMenu ul li {
+    margin: 5px 0;
+  }
+  
+  .footerMenu ul li a, .footerRightMenu ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footerMenu ul li a:hover, .footerRightMenu ul li a:hover {
+    color: #fff;
+  }
+  
+  /* Social Icons */
+  .fIcons a {
+    margin-right: 10px;
+  }
+  
+  .fIcon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+  }
+  
+  .fIcon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Member Input Styles */
+  .fMail {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fInput {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .fButton {
+    padding: 10px;
+    background-color: #f15b2a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+  }
+  
+  .fButton:hover {
+    background-color: #d44820;
+  }
+  
+  /* Footer Bottom Section */
+  .footerBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .footerBottom span {
+    margin: 0 10px;
+  }
+  
+  .footerBottom a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 5px;
+      transition: color 0.3s;
+  }
+  
+  .footerBottom a:hover {
+      color: #f15b2a;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 768px) {
+      .footerContainer {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+  
+      .footerBottom {
+          flex-direction: column;
+      }
+  
+      .footerMenu, .footerRightMenu {
+          margin: 10px 0;
+      }
+  }
+  
+  
+  @media screen and (max-width:480px) {
+    nav{
+      padding: 20px;
+    }
+  
+    .search{
+      display: none;
+    }
+  
+    .navBottom{
+      flex-wrap: wrap;
+    }
+  
+    .menuItem{
+      margin: 20px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+  
+    .product{
+      clip-path: none ;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .productImg{
+      width: 80%;
+    }
+  
+    .productDetails{
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      top: 0;
+    }
+  
+    .productTitle{
+      font-size: 50px;
+      margin: 0;
+    }
+  
+    footer{
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footerLeft{
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .footerRight{
+      padding: 20px;
+      width: 90%;
+      align-items: center;
+      background-color: whitesmoke;
+    }
+  
+    .payment{
+      width: 90%;
+      padding: 20px;
+    }
+  }
